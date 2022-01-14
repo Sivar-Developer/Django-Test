@@ -5,7 +5,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', include('blog.urls'))
+    path('', include('blog.urls', namespace="blog"))
 ]
 
 if settings.DEBUG:
